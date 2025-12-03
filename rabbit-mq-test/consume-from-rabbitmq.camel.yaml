@@ -1,0 +1,15 @@
+- route:
+    id: route-5969
+    nodePrefixId: route-7ae
+    from:
+      id: from-7a70
+      uri: kamelet:spring-rabbitmq-source
+      parameters:
+        host: rabbitmq
+        port: 5672
+        routingKey: test-queue
+        exchangeName: default
+      steps:
+        - log:
+            id: log-9fe5
+            message: "Consumed message from RabbitMQ: ${body}"
