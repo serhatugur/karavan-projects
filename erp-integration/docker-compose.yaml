@@ -1,0 +1,14 @@
+services:
+  erp-integration:
+    image: erp-integration
+    restart: always
+    ports:
+      - "8083:8080"
+    networks:
+      - karavan
+    environment:
+        - ERP_USER=alice
+        - ERP_PASSWORD=alice
+        - MQ_USER=guest
+        - MQ_PASSWORD=guest
+    
