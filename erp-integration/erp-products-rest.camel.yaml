@@ -1,0 +1,8 @@
+- rest:
+    id: rest-745c
+    description: "ERP Products Service "
+    path: products
+    get:
+      - id: get-b1cb
+        to: direct:erp-products-route
+        routeId: erp-products-rest
